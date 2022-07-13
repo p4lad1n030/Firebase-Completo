@@ -45,7 +45,7 @@ function showUserContent(user) {
     showItem(sendEmailVerificationd)
   }
   // aqui adiciona a foto e o nome do usuário
-  userImg.src = user.photoURL ? user.photoURL : '../../assets/imagens/unknownUser.png'; 
+  userImg.src = user.photoURL ? user.photoURL : '.././assets/imagens/unknownUser.png'; 
   userName.innerHTML = user.displayName 
   userEmail.innerHTML = user.email;
   hideItem(authing);
