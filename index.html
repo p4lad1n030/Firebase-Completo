@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="assets/imagens/todoListFavicon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/index.css">
+
+  <title>Projeto Firebase</title>
+</head>
+<body>
+  
+<section id="app">
+  <!-- aqui vira a logo do projeto -->
+  <div class="central">
+    <img src="assets/imagens/todoList.png" alt="todolistImage" class="">
+  </div>
+  <!-- loading de carregamento  -->
+  <div id="loading">
+      <img src="assets/imagens/loading.gif" alt="loading" class="">
+  </div>
+  <!-- Área para não Registrados -->
+  <div id="authing" class="central">
+
+    <!-- Formulario de registro -->
+    <form  id="authForm">
+      <h3 id="authFormTitle">Acesse a sua conta para continuar</h3>
+      <label for="email">E-mail</label>
+      <input type="email" placeholder="E-mail" id="email">
+      <label for="password">Senha</label>
+      <input type="password" placeholder="Sua Senha" id="password">
+      <button type="submit" id="submitAuthForm">Acessar</button>
+    </form>
+
+    <!-- Possibilita a redefinição de senha -->
+    <p id="passwordReset" >
+      Esqueceu a senha?
+      <button type="button" onclick="sendPasswordResetEmail()"   class="alternativa" >Cadastrar uma nova Senha</button>
+    </p>
+
+    <!-- Trocar de registro para cadastro -->
+    <p id="register" class="">Não possui uma conta?
+      <button type="button" onclick="toggleToRegister()"   class="alternativa">Cadastrar uma nova conta</button>
+    </p>
+
+    <!-- Trocar de cadastro para registro -->
+    <p id="access" class="comecaroculto">Ja possui uma conta?
+      <button type="button" onclick="toggleToAccess()" class="alternativa">Acesse sua conta</button>
+    </p>
+
+    <!-- logins alternativos com as contas do google github e facebook -->
+    <p class="">
+      Ou acesse com: <br> 
+      <img src="assets/imagens/google.png" alt="logo do google" onclick="signInWithGoogle()">
+      <img src="assets/imagens/github.png" alt="logo do GitHub" onclick="signInWithGitHub()">
+    </p>
+  </div>
+<!-- Área para autenticados -->
+<div id="userContent" class="comecaroculto central">  
+  <hr>
+  <div id="userInfo" class="central">
+    <img id="userImg" alt="imagem do usuário">
+    <p id="userName"></p>
+    <p id="userEmail"></p>
+    <p id="emailVerified"></p>
+    <div id="sendEmailVerificationDiv">
+      <button type="button" class="alternativa" onclick="sendEmailVerification()">Verificar e-mail</button> 
+    </div>
+    <button type="button" onclick="signOut()" class="alternativa">Sair</button>
+  </div>
+</div>
+</section>
+
+<!-- firebase js -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<!-- my js -->
+<script src="scripts/firebase.js"></script>
+<script src="/scripts/ui.js"></script>
+<script src="scripts/auth.js"></script>
+</body>
+</html>
