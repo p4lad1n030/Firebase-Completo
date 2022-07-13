@@ -59,5 +59,5 @@ function showAuth() {
 }
 // exibindo botão de redirecionamento para o login na verificação de email
 const actionCodeSettings = {
-  url: 'http://127.0.0.1:5501/index.html'
+  url: 'https://p4lad1n030.github.io/Firebase-Completo/index.html'
 }
