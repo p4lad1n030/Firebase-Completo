@@ -57,7 +57,7 @@ function showAuth() {
   hideItem(userContent);
   showItem(authing);
 }
-// exibindo botão de redirecionamento para o login na verificação de email
+// exibindo botão de redirecionamento para o login na verificação de email e redirecionando para a página de login
 const actionCodeSettings = {
-  url: 'https://p4lad1n030.github.io/Firebase-Completo/index.html'
+  url: 'https://projeto-firebase-1de26.firebaseapp.com'
 }
